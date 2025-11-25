@@ -627,7 +627,7 @@ const getStudentsData = async (req, res) => {
   try {
     const hostelId = req.params.id;
     const student = await Students.find({ createdBy: hostelId });
-    console.log("api response :", student);
+    // console.log("api response :", student);
 
     res.status(200).json({
       success: true,
