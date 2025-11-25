@@ -17,6 +17,7 @@ import NoticeBoardRoute from "./noticeBoardRoutes.js";
 import WeeklyFoodMenuRoute from "./weeklyFoodMenuRoutes.js";
 import StudentPaymentRoute from "./studentPaymentRoutes.js";
 import RoomTypes from "./roomTypes.js";
+import superAdminController from "../controllers/superAdminController.js";
 
 router.use("/administrator", AdministratorRoute);
 router.use("/hostel", HostelRoute);
@@ -34,5 +35,6 @@ router.use("/notice_board", NoticeBoardRoute);
 router.use("/weeklyfoodmenu", WeeklyFoodMenuRoute);
 router.use("/student_payment", StudentPaymentRoute);
 router.use("/roomTypes", RoomTypes);
+router.post("/superadmin/create", superAdminController.createSuperAdmin);
 
 export default router;
